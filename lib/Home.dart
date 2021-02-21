@@ -23,6 +23,55 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [Colors.purple, Colors.red]),
+              ),
+              accountName: Text('Ahmer Iqbal'),
+              accountEmail: Text('ahmer5253@gmail.com'),
+              currentAccountPicture: CircleAvatar(
+                child: Text('A'),
+                backgroundColor: Colors.white,
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.cake, color: Colors.purple),
+              title: Text('First Page'),
+            ),
+            ListTile(
+              leading: Icon(Icons.search, color: Colors.redAccent),
+              title: Text('Second Page'),
+            ),
+            ListTile(
+              leading: Icon(Icons.cached, color: Colors.orange),
+              title: Text('Third Page'),
+            ),
+            ListTile(
+              leading: Icon(Icons.menu, color: Colors.green),
+              title: Text('Fourth Page'),
+            ),
+            ListTile(
+              leading: Icon(Icons.cake, color: Colors.purple),
+              title: Text('First Page'),
+            ),
+            ListTile(
+              leading: Icon(Icons.cake, color: Colors.purple),
+              title: Text('First Page'),
+            ),
+            Divider(height: 10.0, color: Colors.black),
+            ListTile(
+              trailing: Icon(Icons.close, color: Colors.red),
+              title: Text('Close'),
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
